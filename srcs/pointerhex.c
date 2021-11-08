@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:52:23 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/08 15:02:49 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/08 20:03:06 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ifhex(t_print *arg_count, char c)
 
 	num = va_arg(arg_count->args, unsigned int);
 	len = 1;
-	str = numlength(num, &len);
+	str = numberlength(num, &len);
 	len--;
 	while (len >= 0)
 	{
