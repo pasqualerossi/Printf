@@ -6,11 +6,11 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 17:59:23 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/10 12:22:13 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:23:09 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_print.h"
+#include "ft_printf.h"
 
 static int	numberlength(unsigned int number)
 {
