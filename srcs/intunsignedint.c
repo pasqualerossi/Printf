@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 17:59:23 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/09 12:28:00 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/10 12:22:13 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	*itoa(unsigned int number)
 		string[--length] = number % 10 + '0';
 		number = number / 10;
 	}
-	return (str);
+	return (string);
 }
 
 void	ifint(t_print *arg_count)
@@ -49,7 +49,7 @@ void	ifint(t_print *arg_count)
 	int		result;
 
 	result = va_arg(arg_count->args, int);
-	string = ft_itoa(value);
+	string = ft_itoa(result);
 	ft_putstr_fd(string, 1);
 	arg_count->counter += ft_strlen(string);
 	free(string);
