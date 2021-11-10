@@ -6,15 +6,14 @@
 #    By: prossi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 17:51:49 by prossi            #+#    #+#              #
-#    Updated: 2021/11/08 18:00:35 by prossi           ###   ########.fr        #
+#    Updated: 2021/11/10 12:34:56 by prossi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRCS = srcs/intunsignedint.c \
-		srcs/stringcharacter.c \
-		srcs/pointerhex.c \
+		srcs/hex-pointer-string-character.c \
 		srcs/ft_printf.c \
 
 OBJS = $(SRCS:.c=.o)
@@ -22,7 +21,7 @@ OBJS = $(SRCS:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 
 %.o: %.c
-	gcc -c $(CFLAGS) -I Includes $< -o $(<:.c=.o)
+	gcc -c $(CFLAGS) -I headers $< -o $(<:.c=.o)
 
 all: $(NAME)
 
