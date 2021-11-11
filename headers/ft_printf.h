@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:14:00 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/10 13:17:09 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/11 12:24:51 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_print
 	int		counter;
 }	t_print;
 
-void	ifchar(t_print *arg_count);
+void	ifcharacter(t_print *arg_count);
 void	ifstring(t_print *arg_count);
 void	ifpointer(t_print *arg_count);
 void	ifhex(t_print *arg_count, char c);
