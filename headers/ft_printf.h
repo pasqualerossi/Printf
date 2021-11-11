@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.h                                         :+:      :+:    :+:   */
+/*   ft_printf.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:14:00 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/11 13:28:49 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/11 13:44:04 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	ifpointer(t_print *arg_count);
 void	ifhex(t_print *arg_count, char character);
 void	ifint(t_print *arg_count);
 void	ifunsignedint(t_print *arg_count);
-int		ft_printf(const char *str, ...);
+int		ft_printf(const char *string, ...);
 
 #endif
