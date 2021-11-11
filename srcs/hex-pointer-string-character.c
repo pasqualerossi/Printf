@@ -6,52 +6,52 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:08:22 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/11 12:24:46 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/11 13:30:59 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char	*numberlength(unsigned long num, int *len)
+static char	*numberlength(unsigned long number, int *length)
 {
-	char	*str;
+	char	*string;
 
-	while (num >= 16)
+	while (number >= 16)
 	{
-		num = num / 16;
-		*len += 1;
+		number = number / 16;
+		*length += 1;
 	}
-	str = (char *)malloc((*len + 1) * sizeof(char));
-	if (str == NULL)
+	string = (char *)malloc((*length + 1) * sizeof(char));
+	if (string == NULL)
 		return (NULL);
-	str[*len] = '\0';
-	return (str);
+	string[*length] = '\0';
+	return (string);
 }
 
-void	ifhex(t_print *arg_count, char c)
+void	ifhex(t_print *arg_count, char character)
 {
-	unsigned int	num;
-	int				len;
-	char			*str;
+	unsigned int	number;
+	int				length;
+	char			*string;
 
-	num = va_arg(arg_count->args, unsigned int);
-	len = 1;
-	str = numberlength(num, &len);
-	len--;
-	while (len >= 0)
+	number = va_arg(arg_count->args, unsigned int);
+	length = 1;
+	string = numberlength(number, &length);
+	length--;
+	while (length >= 0)
 	{
-		if (num % 16 < 10)
-			str[len] = '0' + (num % 16);
-		else if (c == 'x')
-			str[len] = 'a' - 10 + (num % 16);
-		else if (c == 'X')
-			str[len] = 'A' - 10 + (num % 16);
-		num = num / 16;
-		len--;
+		if (number % 16 < 10)
+			string[length] = '0' + (number % 16);
+		else if (character == 'x')
+			string[length] = 'a' - 10 + (number % 16);
+		else if (character == 'X')
+			string[length] = 'A' - 10 + (number % 16);
+		number = number / 16;
+		length--;
 		arg_count->counter++;
 	}
-	ft_putstr_fd(str, 1);
-	free(str);
+	ft_putstr_fd(string, 1);
+	free(string);
 }
 
 void	ifpointer(t_print *arg_count)
