@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:08:22 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/10 18:23:16 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/11 12:24:46 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ifpointer(t_print *arg_count)
 	free(str);
 }
 
-void	ifchar(t_print *arg_count)
+void	ifcharacter(t_print *arg_count)
 {
 	ft_putchar_fd(va_arg(arg_count->args, int), 1);
 	arg_count->counter++;
@@ -88,19 +88,19 @@ void	ifchar(t_print *arg_count)
 
 void	ifstring(t_print *arg_count)
 {
-	char	*str;
-	int		len;
+	char	*string;
+	int		length;
 
-	str = va_arg(arg_count->args, char *);
-	if (str == NULL)
+	string = va_arg(arg_count->args, char *);
+	if (string == NULL)
 	{
-		ft_putstr_fd("(NULL)", 1);
+		ft_putstr_fd("(null)", 1);
 		arg_count->counter += 6;
 	}
 	else
 	{
-		len = ft_strlen(str);
-		ft_putstr_fd(str, 1);
-		arg_count->counter += len;
+		length = ft_strlen(string);
+		ft_putstr_fd(string, 1);
+		arg_count->counter += length;
 	}
 }

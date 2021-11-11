@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:35:34 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/10 18:22:56 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/11 12:25:46 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static t_print	*start(void)
 void	printcheck(const char character, t_print *arg_count)
 {
 	if (character == 'c')
-		ifchar(arg_count);
+		ifcharacter(arg_count);
 	else if (character == 's')
 		ifstring(arg_count);
 	else if (character == 'p')
