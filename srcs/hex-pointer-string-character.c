@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:08:22 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/11 13:36:16 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/12 18:29:24 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ void	ifpointer(t_print *arg_count)
 	length--;
 	while (length >= 0)
 	{
-		if (number % 16 <= 10)
+		if (number % 16 < 10)
 			string[length] = '0' + (number % 16);
 		else
-			string[length] = 'W' + (number % 16);
+			string[length] = 'a' + (number % 16) - 10;
 		number = number / 16;
 		length--;
 		arg_count->counter++;
