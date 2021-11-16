@@ -6,7 +6,7 @@
 /*   By: prossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:35:34 by prossi            #+#    #+#             */
-/*   Updated: 2021/11/11 12:25:46 by prossi           ###   ########.fr       */
+/*   Updated: 2021/11/16 19:54:20 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ void	printcheck(const char character, t_print *arg_count)
 		ft_putchar_fd('%', 1);
 		arg_count->counter++;
 	}
+	else if (character != '\0')
+	{
+		write(1, &character, 1);
+		arg_count->counter++;
+	}
 }
 
 int	ft_printf(const char *string, ...)
@@ -63,7 +68,8 @@ int	ft_printf(const char *string, ...)
 			ft_putchar_fd(string[i], 1);
 			arg_count->counter++;
 		}
-		i++;
+		if (string[i] != '\0')
+			i++;
 	}
 	printcomplete = arg_count->counter;
 	va_end(arg_count->args);
