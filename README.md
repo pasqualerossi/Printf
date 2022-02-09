@@ -3,3 +3,27 @@
 
 # Ft_Printf Tester Link
 https://github.com/Abaker-Hype/42-Cursus-Tester
+
+# Ft_Printf
+
+A partial reimplementation of the printf in C. Handles only the following conversions.
+
+| Conversion | Short Description                                                                             |
+|------------|-----------------------------------------------------------------------------------------------|
+| %c         | Print a single character.                                                                     |
+| %s         | Print a string of characters.                                                                 |
+| %p         | The void * pointer argument is printed in hexadecimal.                                        |
+| %d         | Print a decimal (base 10) number.                                                             |
+| %i         | Print an integer in base 10.                                                                  |
+| %u         | Print an unsigned decimal (base 10) number.                                                   |
+| %x         | Print a number in hexadecimal (base 16), with lowercase.                                      |
+| %X         | Print a number in hexadecimal (base 16), with uppercase.                                      |
+| %%         | Print a percent sign.                                                                         |
+
+See the [subject.pdf](https://github.com/pasqualerossi/Printf/blob/main/en.subject.pdf) for further details.
+
+### Dependency
+
+Requires the libft library to run. The full libft is in the subdirectory [`libft`](https://github.com/pasqualerossi/Printf/tree/main/libft) 
+This includes src folder, Makefile, etc. 
+Libft will be compiled through recursive invocation of make.
