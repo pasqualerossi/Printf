@@ -21,9 +21,3 @@ A partial reimplementation of the printf in C. Handles only the following conver
 | %%         | Print a percent sign.                                                                         |
 
 See the [subject.pdf](https://github.com/pasqualerossi/Printf/blob/main/en.subject.pdf) for further details.
-
-### Dependency
-
-Requires the libft library to run. The full libft is in the subdirectory [`libft`](https://github.com/pasqualerossi/Printf/tree/main/libft) 
-This includes src folder, Makefile, etc. 
-Libft will be compiled through recursive invocation of make.
