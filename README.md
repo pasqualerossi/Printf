@@ -1,6 +1,3 @@
-# Ft_Printf Tester Link
-https://github.com/Abaker-Hype/42-Cursus-Tester
-
 # Ft_Printf
 
 A partial reimplementation of the printf in C. Handles only the following conversions.
