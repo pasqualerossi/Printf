@@ -19,5 +19,3 @@ A partial reimplementation of the printf in C. Handles only the following conver
 | %x         | Print a number in hexadecimal (base 16), with lowercase.                                      |
 | %X         | Print a number in hexadecimal (base 16), with uppercase.                                      |
 | %%         | Print a percent sign.                                                                         |
-
-See the [subject.pdf](https://github.com/pasqualerossi/Printf/blob/main/en.subject.pdf) for further details.
